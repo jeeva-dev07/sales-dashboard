@@ -1,0 +1,146 @@
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+
+  --primary: #0f172a;
+  --green: #22c55e;
+
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   LINKS RESET
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   BUTTON RESET
+========================= */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =========================
+   INPUT RESET
+========================= */
+input,
+select,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* =========================
+   FOCUS ACCESSIBILITY (IMPORTANT FIX)
+========================= */
+:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* =========================
+   SCROLLBAR (CLEAN UI)
+========================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* =========================
+   UTILITY CLASSES
+========================= */
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* =========================
+   LOADING STATE
+========================= */
+.loading {
+  padding: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* =========================
+   SAFE IMAGE HANDLING
+========================= */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   TABLE BASE SAFETY (IMPORTANT FOR YOUR DASHBOARD)
+========================= */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* =========================
+   SMOOTH FONT RENDERING IMPROVEMENT
+========================= */
+html {
+  scroll-behavior: smooth;
+}
