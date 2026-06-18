@@ -1,0 +1,52 @@
+1.Monthly Revenue SQL Query + Explanation
+SQL Query:
+SELECT 
+    DATE_FORMAT(order_date, '%Y-%m') AS month,
+    SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY DATE_FORMAT(order_date, '%Y-%m')
+ORDER BY month;
+Explanation:
+DATE_FORMAT(order_date, '%Y-%m')
+→ This converts the full date into Year-Month format (example: 2026-06)
+→ So all orders in the same month are grouped together.
+GROUP BY
+→ This groups rows that have the same month value
+2.. How Charts Re-fetch When Date Filter Changes
+When user changes date filter (like last 7 days / monthly / yearly):
+React state (example: selectedDate) gets updated
+useEffect is used like this:
+useEffect(() => {
+  fetchChartData();
+}, [selectedDate]);
+How it works:
+selectedDate is in dependency array
+Whenever user changes filter → state updates
+useEffect runs again automatically
+New API call is made with updated filter
+3.3. Bar Chart vs Line Chart
+📊 Bar Chart:
+Used for comparison between categories
+Example:
+Sales by product
+Revenue by region
+Best when data is not time-based
+👉 Shows differences clearly Line Chart:
+Used for trends over time
+Example:
+Monthly revenue
+Daily sales growth
+Best when data has time sequence
+👉 Shows pattern and growth
+4.4. ResponsiveContainer in Recharts
+What it does:
+<ResponsiveContainer width="100%" height={300}>
+Explanation:
+It makes charts responsive to screen size
+Automatically adjusts width & height
+Why important:
+Works on mobile, tablet, desktop
+No fixed sizing issues
+Chart never overflows or breaks UI
+👉 Without it → charts may look broken in different screens
+👉 With it → fully responsive dashboard
