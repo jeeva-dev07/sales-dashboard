@@ -1,6 +1,7 @@
 📊 Task 11 - Sales Analytics Dashboard
 >>Project Overview
-This project is a Sales Analytics Dashboard built using React (Frontend) and Flask (Backend) with MySQL database.
+This project is a Sales Analytics Dashboard built using React
+>> (Frontend) and Flask (Backend) with MySQL database.
 It visualizes sales data using charts, tables, and KPI cards.
 >> Tech Stack
 React.js
